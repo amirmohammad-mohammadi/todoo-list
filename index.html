@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap-4.3.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <title>ToDoList</title>
+</head>
+<body onload="lod()" class=" vh-100 d-flex flex-column bg-mamad overflowX-hidden body">
+    <div id="wrap" class="wrapper1">
+        <div class="pup">
+            <h2>Are you sure?</h2>
+            <hr>
+            <div class="btm-box">
+                <button class="yes-btm" onclick="yes()">YES</button>
+                <button class="no-btm" onclick="no()">NO</button>
+            </div>
+        </div>
+    </div>
+    <header class="">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light h-50 border-bottom">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a id="ch2" class="nav-link " href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index2.html">ToDos</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="d-flex justify-content-center ">
+        <form action="" class="d-flex flex-column  p-5 ">
+            <label class="mt-2 " for="">Title*</label>
+            <input class="mb-1 w_and_h rounded border-0 place " id="inpput1" placeholder="What will you do today?" type="text" required>
+            <label class="mt-2 " for="">Description</label>
+            <input class="mb-1 w_and_h rounded border-0 place " id="inpput2" placeholder="Some information" type="text" >
+            <label class="mt-2 " for="">Due Date*</label>
+            <input class="w_and_h rounded border-0 place " id="inpput3" placeholder="10/31/2021" type="text" required >
+            <button class="w_and_h mt-4 bg-primary border-0 rounded text-white" id="addTaskBtn" onclick="add(event)">Submit</button>
+            <button class="w_and_h mt-4 bg-primary border-0 rounded text-white presSave" id="saveTaskBtn" onclick="save(event)" >Save</button>
+        </form>
+    </div>
+
+        <div id="notif" class="notification  justify-content-between bg-success w-25 text-white px-3 py-1 rounded ml-1">
+            <div>
+                <h4>Successful</h4>
+                <p>The todo successfully submited.</p>
+            </div>
+            <div class="mt-1">
+                <i id="closer" class="far fa-times-circle justify-content-end cursor" onclick="closePointer()"></i>
+            </div>
+        </div>
+
+
+
+    <script src="bootstrap-4.3.1-dist/js/bootstrap.bundle.js"></script>
+<!--    <script src="main.js"></script>-->
+    <script src="mainTodo.js"></script>
+
+</body>
+</html>
